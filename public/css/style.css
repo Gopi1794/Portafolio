@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --body-color: #010101;
+    --nav-color: #000000;
+    --side-nav: #cccccc;
+    --text-color: #141312;
+    --luces: #086699;
+    --search-text: #000000;
+    --bs-body-bg: #ffffff5a;
+}
+
+* {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#particles-js {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    /* Para que las partículas estén detrás del contenido */
+}
+
+body {
+    transition: background-color 0.5s ease-in-out, background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.modo-claro {
+    background: linear-gradient(90deg, #9f4951 0%, #1c6b85 50%);
+}
+
+.modo-oscuro {
+    background-color: #000;
+}
+
+
+/* modo obscuro*/
+
+.uil-sun,
+.uil-moon {
+    color: #ffffff;
+    font-size: 24px;
+    /* Ajustá el tamaño si querés */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.uil-sun {
+    display: none;
+}
+
+.modo-oscuro .uil-sun {
+    display: flex;
+}
+
+.modo-oscuro .uil-moon {
+    display: none;
+}
+
+
+nav {
+    z-index: 1000;
+    padding-top: 30px;
+    border-radius: 25px;
+    position: fixed;
+    background-color: #65656591;
+    backdrop-filter: blur(10px);
+    border: 3px solid #ffffff;
+    align-items: center;
+}
+
+nav .nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 5px;
+    padding: 6px;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav .nav-links li a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.7s all;
+    padding: 10px;
+    font-weight: 600;
+}
+
+
+nav .nav-links li a:hover {
+    color: #086699;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+.btn i {
+    font-size: 30px;
+}
+
+
+
+.text-inicial {
+    border-radius: 20px;
+    background-color: #76767670;
+    backdrop-filter: blur(25px);
+    border: 1px solid #ffffff;
+}
+
+
+.intro {
+    display: flex;
+    color: var(--side-nav);
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+.intro button {
+    color: #fff;
+    font-size: 20px;
+    transition: 0.7s all;
+}
+
+.intro button i {
+    width: 20px;
+}
+
+.intro button:hover {
+    background-color: #086699;
+}
+
+.img-circulo {
+    justify-content: center;
+    align-items: center;
+}
+
+.video {
+    display: none;
+    width: 400px;
+    height: auto;
+    border-radius: 60%;
+
+}
+
+.fondo-circulo {
+    width: 400px;
+    /* Cambiado de vh a vw para ocupar el ancho completo */
+    height: auto;
+    filter: drop-shadow(0 0 0.75rem var(--body-color));
+    z-index: 1;
+}
+
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    animation: spin 20s linear infinite;
+}
+
+.bit {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    z-index: -0;
+    animation: spinBit 5s linear infinite;
+}
+
+.card_body {
+    backdrop-filter: blur(25px);
+
+}
+
+.dialogo {
+    position: absolute;
+    opacity: 0;
+    top: 29%;
+    left: 67%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: 1s ease-in-out forwards;
+}
+
+
+
+
+.btns .btn {
+    color: #ffffff;
+    border: 0.5px solid #fff;
+    filter: drop-shadow(15px 26px 18px -7px rgba(255, 0, 0, 0.4));
+}
+
+
+.btns .btn {
+    background: #086699;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+.btns .btn:hover {
+    background: #fff;
+    color: #086699;
+}
+
+.btns .btn:before,
+.btns .btn:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #086699;
+    transition: 400ms ease all;
+}
+
+.btns .btn:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.btns .btn:hover:before,
+.btns .btn:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+
+.tecnologias p {
+    background-color: #086699;
+    border: 1px solid #ffffff;
+    border-radius: 15%;
+    padding: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.tecnologias a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.tecnologias p:hover {
+    text-decoration: none;
+    background-color: #1188c8;
+}
+
+
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinBit {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+
+
+@media (max-width: 1300px) {
+
+    .fondo-circulo {
+        width: 400px;
+        height: 400px;
+
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .circulo-imagen {
+        padding: 100px 0;
+        width: 50px;
+
+    }
+
+    .intro .row {
+        flex-direction: column;
+    }
+
+    .dialogo {
+        display: none;
+    }
+}
+
+@media (max-width: 554px) {
+    .circle {
+        display: none;
+    }
+
+    .fondo-circulo {
+        width: 300px;
+        height: 300px;
+    }
+
+    .video {
+        width: 300px;
+        height: 300px;
+    }
+}
