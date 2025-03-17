@@ -28,6 +28,32 @@
 </script>
 
 <body class="modo-claro">
+
+    <div class="d-flex p-3 align-items-center music mt-2 w-100 justify-content-between">
+
+        <!-- Audio (oculto) -->
+        <audio id="audio">
+            <source src="audio/Billie Eilish - CHIHIRO (OFFICIAL INSTRUMENTAL WITH BACKING VOCALS).mp3"
+                type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+        <!-- Controles -->
+        <div class="d-flex gap-3 align-items-center flex-grow-1">
+            <button id="playPause" class="btn btn-outline-success">▶</button>
+            <span id="currentTime">0:00</span>
+            <input type="range" id="progress" class="form-range w-100" min="0" value="0">
+            <span id="duration">0:00</span>
+        </div>
+
+        <!-- Control de volumen -->
+        <div class="ms-3">
+            <input type="range" id="volume" class="form-range w-100" min="0" max="1" step="0.1" value="0.5">
+        </div>
+
+    </div>
+
+
     <div id="particles-js"></div>
 
     <div class="container">
@@ -560,6 +586,7 @@
         });
 
     </script>
+    <script src="js/cancion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
