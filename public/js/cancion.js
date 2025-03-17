@@ -16,10 +16,10 @@ const formatTime = (seconds) => {
 playPauseBtn.addEventListener("click", () => {
     if (audio.paused) {
         audio.play();
-        playPauseBtn.textContent = "⏸";
+        playPauseBtn.textContent = "⏸️";
     } else {
         audio.pause();
-        playPauseBtn.textContent = "▶";
+        playPauseBtn.textContent = "▶️";
     }
 });
 
