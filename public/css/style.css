@@ -30,12 +30,12 @@
 
 body {
     transition: background-color 0.5s ease-in-out, background 0.5s ease-in-out, color 0.5s ease-in-out;
+    padding: 4px;
 }
 
 .modo-claro {
     background-color: #3f3f3f;
     background-image: linear-gradient(90deg, #111874 0%, #4a0e66 100%);
-
     background-size: 300% 300%;
     animation: gradientAnimation 3s infinite alternate;
 }
